@@ -34,7 +34,7 @@ public class SnapGame extends CardGame {
             if (input.equalsIgnoreCase("V>P")) {
                 System.out.println("༼つಠ益ಠ༽つ ─=≡ΣO)) hadouken");
             } else {
-                if (canSnap() && !snapOpportunity()) {
+                if (canSnap() && !snapOpportunity) {
                     snapOpportunity = true;
                     snapOpportunityStartTime = System.currentTimeMillis();
                     System.out.println("Snap opportunity ~(‾▿‾)~ type 'snap' within 2 seconds to win.");
