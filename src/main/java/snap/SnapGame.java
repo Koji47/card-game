@@ -42,7 +42,7 @@ public class SnapGame extends CardGame {
                     scheduledTask.cancel(true);
                 }
                 snapExecutor.shutdown(); // cancels the scheduled task
-                System.out.println("0Snap! (∩╹□╹∩) " + currentPlayer.getName() + " wins \\m/ (>.<) \\m/ ");
+                System.out.println("Snap! (∩╹□╹∩) " + currentPlayer.getName() + " wins \\m/ (>.<) \\m/ ");
                 break;
             } else if (canSnap()){
                 snapExecutor.shutdown(); // cancels the scheduled task
