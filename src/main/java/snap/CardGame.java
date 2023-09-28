@@ -6,12 +6,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CardGame {
-    private List<Card> deckOfCards;
-    private Card previousCard;
-    private Card currentCard;
+    protected List<Card> deckOfCards;
+    protected Card previousCard;
+    protected Card currentCard;
 
     public Card getCurrentCard() {
         return currentCard;
+    }
+
+    public Card getPreviousCard() {
+        return previousCard;
     }
 
     public CardGame() {
@@ -19,10 +23,6 @@ public class CardGame {
         makeDeck();
         this.previousCard = null;
         this.currentCard = null;
-    }
-
-    public Card getPreviousCard() {
-        return previousCard;
     }
 
     public void makeDeck() {
@@ -45,11 +45,10 @@ public class CardGame {
     }
 
     public Card dealCard() {
-        Card currentCard = null;
         if (!deckOfCards.isEmpty()) {
-            currentCard = deckOfCards.get(0);
+            previousCard = currentCard;
+            currentCard = deckOfCards.remove(0);
             deckOfCards.remove(currentCard);
-//            System.out.println(currentCard);
         } else {
             System.out.println("The deck is empty. try again");
         }

@@ -2,12 +2,12 @@ package snap;
 
 public class Card {
     private final String suit;
-    private final String value;
+    private final int value;
     private final String symbol;
 
     public Card(String suit, int value, String symbol) {
         this.suit = suit;
-        this.value = String.valueOf(value);
+        this.value = value;
         this.symbol = symbol;
     }
 
@@ -21,7 +21,7 @@ public class Card {
         return symbol;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 
